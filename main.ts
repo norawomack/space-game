@@ -1,22 +1,5 @@
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    projectile = sprites.createProjectileFromSprite(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . 5 5 5 . . . . . . . 
-        . . . . . . 5 5 5 . . . . . . . 
-        . . . . . . 5 5 5 . . . . . . . 
-        . . . . . . 5 5 5 . . . . . . . 
-        . . . . . . 5 5 5 . . . . . . . 
-        . . . . . . 5 5 5 . . . . . . . 
-        . . . . . . 5 5 5 . . . . . . . 
-        . . . . . . 5 5 5 . . . . . . . 
-        . . . . . . 5 5 5 . . . . . . . 
-        `, mySprite, 0, -50)
+    projectile = sprites.createProjectileFromSprite(assets.image`doom`, mySprite, 0, -50)
     music.pewPew.play()
 })
 sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Projectile, function (sprite, otherSprite) {
